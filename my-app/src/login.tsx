@@ -3,130 +3,60 @@ import { useNavigate } from 'react-router-dom';
 
 const Login: React.FC = () => {
   const navigate = useNavigate();
-
+  
   return (
-    <div>
-      <main id='main-login' className='flex flex-col-reverse justify-between p-10 md:p-20'>
-        <div>
-          <h1 id='login'>
-            LOGIN
-          </h1>
-          <div>
-            <button className='color-red-50' id='L1' 
-              onClick={() => navigate('/landing')}>
-              Login
-            </button>
-            <button id='L2'
-              onClick={() => navigate('/')}>
-              Return
-            </button>
+    <main id="main-login" className="flex items-center justify-center min-h-screen bg-slate-100 p-10 md:p-20">
+      <div className="w-full max-w-4xl">
+        {/* Modal (demo) */}
+        <div className="mx-auto max-w-lg rounded-lg overflow-hidden shadow-sm bg-white">
+          <div className="p-6">
+            <div className="flex items-center justify-center text-white h-24 rounded-md bg-slate-800 mb-4">
+              <h3 className="text-2xl">Sign In</h3>
+            </div>
+
+            <div className="space-y-4">
+              <div>
+                <label className="block mb-2 text-sm text-slate-600">Email</label>
+                <input
+                  type="email"
+                  className="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm"
+                  placeholder="Your Email"
+                />
+              </div>
+
+              <div>
+                <label className="block mb-2 text-sm text-slate-600">Password</label>
+                <input
+                  type="password"
+                  className="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm"
+                  placeholder="Your Password"
+                />
+              </div>
+
+              <div className="flex items-center">
+                <input id="check-2" type="checkbox" className="mr-2 h-5 w-5 rounded border border-slate-300" />
+                <label htmlFor="check-2" className="text-sm text-slate-600">Remember Me</label>
+              </div>
+
+              <div>
+                <button
+                  type="button"
+                  className="w-full rounded-md bg-slate-800 py-2 px-4 text-white shadow-md hover:shadow-lg"
+                >
+                  Sign In
+                </button>
+              </div>
+
+              <p className="text-center text-sm text-slate-600 mt-2">
+                Don&apos;t have an account?
+                <a href="#signup" className="ml-1 text-sm font-semibold text-slate-700 underline">Sign up</a>
+              </p>
+            </div>
           </div>
         </div>
-      </main>
-    </div>
+      </div>
+    </main>
   );
 };
 
 export default Login;
-
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.tailwindcss.com" rel="stylesheet">
-  </head>
-  <body class="h-screen overflow-hidden flex items-center justify-center" style="background: #edf2f7;">
-    <!-- MODAL CODE START -->
-
-    <div
-      data-dialog-backdrop="sign-in-modal"
-      data-dialog-backdrop-close="true"
-      class="inset-0 z-[999] grid h-screen w-screen place-items-center bg-black bg-opacity-60 backdrop-blur-sm transition-opacity duration-300"
-    >
-      <div
-        data-dialog="sign-in-modal"
-        class="relative mx-auto w-full max-w-[24rem] rounded-lg overflow-hidden shadow-sm"
-      >
-        <div class="relative flex flex-col bg-white">
-          <div class="relative m-2 items-center flex justify-center text-white h-24 rounded-md bg-slate-800">
-            <h3 class="text-2xl">Sign In Modal</h3>
-          </div>
-          <div class="flex flex-col gap-4 p-6">
-            <div class="w-full max-w-sm min-w-[200px]">
-              <label class="block mb-2 text-sm text-slate-600">Email</label>
-              <input
-                type="email"
-                class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
-                placeholder="Your Email"
-              />
-            </div>
-
-            <div class="w-full max-w-sm min-w-[200px]">
-              <label class="block mb-2 text-sm text-slate-600">Password</label>
-              <input
-                type="password"
-                class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
-                placeholder="Your Password"
-              />
-            </div>
-
-            <div class="inline-flex items-center mt-2">
-              <label class="flex items-center cursor-pointer relative" htmlFor="check-2">
-                <input
-                  type="checkbox"
-                  class="peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
-                  id="check-2"
-                />
-                <span class="absolute text-white opacity-0 pointer-events-none peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="1">
-                    <path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"
-                    ></path>
-                  </svg>
-                </span>
-              </label>
-              <label class="cursor-pointer ml-2 text-slate-600 text-sm" htmlFor="check-2">Remember Me</label>
-            </div>
-          </div>
-          <div class="p-6 pt-0">
-            <button
-              class="w-full rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-              type="button"
-            >
-              Sign In
-            </button>
-            <p class="flex justify-center mt-6 text-sm text-slate-600">
-              Don&apos;t have an account?
-              <a href="#signup" class="ml-1 text-sm font-semibold text-slate-700 underline">Sign up</a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="text-center mt-4">
-      <button
-        data-dialog-target="sign-in-modal"
-        class="rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2"
-        type="button"
-      >
-        Open Modal
-      </button>
-    </div>
-
-    <!-- MODAL CODE END -->
-
-    <br />
-
-    <div class="px-6">
-      <h2 class="text-sm font-semibold mb-2">Next script must be included:</h2>
-      <pre class="bg-gray-800 text-white p-4 rounded-lg overflow-x-scroll">
-        <code>https://unpkg.com/@material-tailwind/html@latest/scripts/dialog.js</code>
-      </pre>
-    </div>
-  </body>
-</html>
