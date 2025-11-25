@@ -2,5 +2,5 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Keep only Tailwind directives here — moved component styles into components using Tailwind utilities */
+/* Keep only Tailwind directives. Component styling moved to Tailwind utility classes in components. */
 
