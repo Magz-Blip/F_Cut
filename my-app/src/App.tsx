@@ -14,10 +14,12 @@ const App: React.FC = () => {
       {/* HERO PAGE */}
       <main id='main' className='flex flex-col-reverse justify-between p-6 md:p-10 border-4 border-black rounded-xl box-border'>
         <div>
+          <h6 className='text-red-500'>WELCOME TO</h6>
           <h1 id='title' className='text-4xl md:text-5xl font-bold leading-tight text-center'>
             ALLERCAK
           </h1>
-          <div className='flex space-x-4'>
+          <div className='flex space-x-4' >
+        
             <button id='b1' 
               onClick={() => navigate('/login')}
               className='px-6 py-3 rounded-lg text-base font-semibold border-2 border-black bg-white text-black hover:bg-black hover:text-white transition-all'>
