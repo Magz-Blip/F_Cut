@@ -16,7 +16,7 @@ const App: React.FC = () => {
         <div>
           <h6 className='text-red-500'>WELCOME TO</h6>
           <h1 id='title' className='text-4xl md:text-5xl font-bold leading-tight text-center'>
-            ALLERCAK
+            PLACEHOLD
           </h1>
           <div className='flex space-x-4' >
         

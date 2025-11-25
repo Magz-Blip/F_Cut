@@ -4,11 +4,7 @@ module.exports = {
     './index.html',
     './src/**/*.{js,ts,jsx,tsx}'
   ],
-  // Some classes (color utilities like from-*/to-* or slash opacity) may be
-  // removed by the optimizer if Tailwind can't detect them at compile time.
-  // Add a small safelist to ensure the landing page color utilities are kept.
-  // Use a mixture of exact strings + regex patterns to ensure classes are
-  // preserved even when they include slashes or are generated dynamically.
+//tailwind safe list for unrecognised pieces of cs or pieces that are not working //
   safelist: [
     'text-gray-800',
     { pattern: /from-/ },
@@ -16,6 +12,8 @@ module.exports = {
     { pattern: /bg-.*yellow/ },
     { pattern: /text-.*yellow/ },
     { pattern: /hover:text-.*yellow/}
+
+
   ],
   theme: {
     extend: {},
