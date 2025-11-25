@@ -14,7 +14,7 @@ const Landing = () => {
       </header>
       
       {/* HERO PAGE */}
-      <main className='flex flex-col-reverse md:flex-row items-center justify-between p-10 md:p-20 bg-gradient-to-r from-yellow-500 to-white-500'>
+      <main className='flex flex-col-reverse md:flex-row items-center justify-between p-10 md:p-20 bg-gradient-to-r from-yellow-500 to-white'>
         <div className='md:w-1/2 space-y-6'>
           <h1 className='text-4xl md:text-5xl font-bold leading-tight'>
             Welcome to Landing Page
