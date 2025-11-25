@@ -1,10 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 /*APP*/
 #main {
-    background-color: #FFFFFF;
+    background:linear-gradient(30deg ,#FFFFFF 30%, #0066FF 100% );
     min-height: 100vh;
     display: flex;
     flex-direction: column;

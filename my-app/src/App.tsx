@@ -11,9 +11,9 @@ const App: React.FC = () => {
       </header>
       
       {/* HERO PAGE */}
-      <main id='main' className='flex flex-col-reverse justify-between p-10 md:p-20'>
-        <div className='md:w-1/2 space-y-6'>
-          <h1 id='title' className='text-4xl md:text-5xl font-bold leading-tight'>
+      <main id='main' >
+        <div>
+          <h1 id='title'>
             ALLERCAK
           </h1>
           <div className='flex space-x-4'>
