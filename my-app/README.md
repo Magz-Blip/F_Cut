@@ -71,3 +71,17 @@ export default defineConfig([
   },
 ])
 ```
+
+---
+
+## Deployment
+
+This repo includes CI and configuration for two easy ways to publish the built Vite app:
+
+- GitHub Pages (via Actions): there's a workflow at `.github/workflows/deploy-gh-pages.yml` which builds `my-app` and publishes `my-app/dist` to the `gh-pages` branch whenever you push to `main`.
+
+- Vercel: a `vercel.json` file is present that tells Vercel to build the project and serve files from `dist`. You can import this repo into Vercel (https://vercel.com/import) and set the build command to `npm run build` and the output directory to `dist`.
+
+Notes:
+- If you use GitHub Pages for a project site (https://<username>.github.io/<repo>), update the router's base path if needed — in Vite apps you may need to set `base` in `vite.config.ts` or configure `BrowserRouter` with the repo subpath.
+- For Vercel, client-side routing is supported by `vercel.json` which routes all paths to `index.html`.
