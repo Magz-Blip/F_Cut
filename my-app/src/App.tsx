@@ -12,21 +12,21 @@ const App: React.FC = () => {
       </header>
       
       {/* HERO PAGE */}
-      <main id='main' className='flex flex-col-reverse justify-between p-10 md:p-20'>
+      <main id='main' className='flex flex-col-reverse justify-between p-6 md:p-10 border-4 border-black rounded-xl box-border'>
         <div>
-          <h1 id='title' className='text-4xl md:text-5xl font-bold leading-tight'>
+          <h1 id='title' className='text-4xl md:text-5xl font-bold leading-tight text-center'>
             ALLERCAK
           </h1>
           <div className='flex space-x-4'>
             <button id='b1' 
               onClick={() => navigate('/login')}
-              className='hover:bg-black hover:text-white'>
+              className='px-6 py-3 rounded-lg text-base font-semibold border-2 border-black bg-white text-black hover:bg-black hover:text-white transition-all'>
               Login
           
             </button>
             <button id='b2'
               onClick={() => navigate('/signup')}
-              className='hover:bg-[#0052CC] hover:shadow-lg'>
+              className='px-6 py-3 rounded-lg text-base font-semibold bg-[#0066FF] text-white hover:bg-[#0052CC] hover:shadow-lg transition-all'>
               Sign up 
             </button>
           </div>
