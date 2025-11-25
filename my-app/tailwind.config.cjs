@@ -15,7 +15,7 @@ module.exports = {
     { pattern: /to-/ },
     { pattern: /bg-.*yellow/ },
     { pattern: /text-.*yellow/ },
-    { pattern: /hover:text-.*yellow/ }
+    { pattern: /hover:text-.*yellow/}
   ],
   theme: {
     extend: {},
