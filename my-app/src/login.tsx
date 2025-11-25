@@ -1,8 +1,8 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+// no router navigation used yet
 
 const Login: React.FC = () => {
-  const navigate = useNavigate();
+  // navigate not currently used
   
   return (
     <main id="main-login" className="flex items-center justify-center min-h-screen bg-slate-100 p-10 md:p-20">
