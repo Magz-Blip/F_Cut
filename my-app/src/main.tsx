@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import App from './App'
 import Landing from './Landing'
+import Login from './login'
+import Signup from './signup'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
@@ -11,6 +13,8 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/landing" element={<Landing />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
