@@ -1,0 +1,15 @@
+<div>
+          <img 
+            src="/ein.webp"
+            alt="demo-img"
+            className='min-h-100'
+          />
+        </div>
+
+
+light        
+#0066FF - Blue
+##FFFFFF - white
+
+dark
+
