@@ -12,6 +12,7 @@ module.exports = {
     { pattern: /bg-.*yellow/ },
     { pattern: /text-.*yellow/ },
     { pattern: /hover:text-.*yellow/}
+    
 
 
   ],

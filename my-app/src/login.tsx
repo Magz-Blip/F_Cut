@@ -11,12 +11,19 @@ const Login: React.FC = () => {
           <h1 id='login'>
             LOGIN
           </h1>
+          
+          <div id='inputs-l'>
+          <input type="email" placeholder="Email"></input> 
+          <br></br>
+          <input type="password" placeholder="Password"></input>
+          </div>
+          
           <div>
-            <button className='color-red-50' id='L1' 
+            <button id ='b3' className='px-6 py-3 rounded-lg text-base font-semibold border-2 border-black bg-white text-black hover:bg-black hover:text-white transition-all'
               onClick={() => navigate('/landing')}>
               Login
             </button>
-            <button id='L2'
+            <button id='b4' className='px-6 py-3 rounded-lg text-base font-semibold bg-[#0066FF] text-white hover:bg-[#0052CC] hover:shadow-lg transition-all'
               onClick={() => navigate('/')}>
               Return
             </button>

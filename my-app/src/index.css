@@ -27,7 +27,10 @@ body {
     height: 100%;
     overflow-x: hidden;
 }  
-
+#S1,
+#S2,
+#b3,
+#b4,
 #b1,
 #b2 {
     padding: 12px 24px;
@@ -74,16 +77,135 @@ body {
   box-shadow: 0 4px 12px rgba(0, 102, 255, 0.3);
 }
 
-
 /*login*/
 
-/* Fallbacks for landing page color utilities (in case some color utilities
-    were excluded during optimization). These mirror Tailwind names used in
-    `Landing.tsx` so the visual look remains consistent. */
-.text-gray-800 { color: #1f2937; }
-.bg-yellow-900\/25 { background-color: rgba(113,63,18,0.25); }
-.hover\:text-yellow-600:hover { color: #ca8a04; }
-.from-yellow-500 { --tw-gradient-from: #f59e0b; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255,255,255,0)); }
-.to-white { --tw-gradient-to: #ffffff; }
+#main-login {
+    background:linear-gradient(30deg ,#FFFFFF 30%, #0066FF 100% );
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5px;
+    padding-left: 1px;
+    box-sizing: border-box;
+    padding: 16px;
+    border: #0066FF;
+
+}
+
+#login {
+    text-align: center;
+
+}
+    
+#b3 {
+    background-color: #FFFFFF;
+    color: #000000;
+    border: 2px solid #000000;
+    }
+
+
+#b4 {
+    background-color: #0066FF;
+    color: #FFFFFF;
+    }
+
+#b3:hover {
+    background-color: #000000;
+    color: #FFFFFF;
+    transform: translateY(-2px);
+  }
+
+
+#b4:hover {
+  background-color: #0052CC;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 102, 255, 0.3);
+}
+
+#inputs-l {
+    text-align: center;
+    padding: 8px 16px;
+    background-color: #ccc;
+    border: 1px;
+    border-radius: 14px;
+
+}
+
+
+/*signup*/
+
+
+
+#S1 {
+    background-color: #FFFFFF;
+    color: #000000;
+    border: 2px solid #000000;
+    }
+
+
+#S2 {
+    background-color: #0066FF;
+    color: #FFFFFF;
+    }
+
+#S1:hover {
+    background-color: #000000;
+    color: #FFFFFF;
+    transform: translateY(-2px);
+  }
+
+
+#S2:hover {
+  background-color: #0052CC;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 102, 255, 0.3);
+}
+
+#main-signup {
+    text-align: center;
+}
+
+#main-signup {
+    background:linear-gradient(30deg ,#FFFFFF 30%, #0066FF 100% );
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5px;
+    padding-left: 1px;
+    box-sizing: border-box;
+    padding: 16px;
+    border: #0066FF;
+
+}
+
+/*inputs*/
+#inputs-l,
+#inputs-s {
+    width: 230px;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    font-size: 15px;
+    color: #000;
+    outline: none;
+    transition: 0.2s ease;
+}
+
+
+#inputs-s::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+#inputs-s:focus {
+    border-color: white;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
 
 

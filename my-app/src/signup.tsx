@@ -11,8 +11,19 @@ const Signup: React.FC = () => {
 					<h1 id='signup'>
 						SIGN UP
 					</h1>
+					
+					<div id='inputs-s'>
+          			<input type="name" placeholder="User Name"></input> 
+          			<br></br>
+          			<input type="email" placeholder="Email"></input>
+					<br></br>
+          			<input type="password" placeholder="Password"></input>
+					<br></br>
+          			<input type="password" placeholder="Comfirm Password"></input>
+          			</div>
+					
 					<div>
-						<button id='S1' 
+						<button id='S1' className="w-56 p-3 rounded-lg border border-white/50 text-black bg-transparent outline-none focus:border-blue-500 focus:shadow-[inset_10px_0_0_0_white,0_0_8px_rgba(74,144,226,0.5)]"
 							onClick={() => navigate('/landing')}>
 							Sign up
 						</button>
