@@ -1,41 +1,95 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Signup: React.FC = () => {
-	const navigate = useNavigate();
+  const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [error, setError] = useState("");
 
-	return (
-		<div>
-			<main id='main-signup' className='flex flex-col-reverse justify-between p-10 md:p-20'>
-				<div>
-					<h1 id='signup'>
-						SIGN UP
-					</h1>
-					
-					<div id='inputs-s'>
-          			<input type="name" placeholder="User Name"></input> 
-          			<br></br>
-          			<input type="email" placeholder="Email"></input>
-					<br></br>
-          			<input type="password" placeholder="Password"></input>
-					<br></br>
-          			<input type="password" placeholder="Comfirm Password"></input>
-          			</div>
-					
-					<div>
-						<button id='S1' className="w-56 p-3 rounded-lg border border-white/50 text-black bg-transparent outline-none focus:border-blue-500 focus:shadow-[inset_10px_0_0_0_white,0_0_8px_rgba(74,144,226,0.5)]"
-							onClick={() => navigate('/landing')}>
-							Sign up
-						</button>
-						<button id='S2'
-							onClick={() => navigate('/')}>
-							Return
-						</button>
-					</div>
-				</div>
-			</main>
-		</div>
-	);
+  const handleSignup = async () => {
+    setError("");
+
+    if (!email || !password || !confirmPassword) {
+      setError("All fields are required");
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      setError("Please enter a valid email address");
+      return;
+    }
+
+    if (password !== confirmPassword) {
+      setError("Passwords do not match");
+      return;
+    }
+
+    const res = await fetch(import.meta.env.VITE_API_URL + "/api/signup", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, password })
+    });
+
+    const data = await res.json();
+
+    if (data.success) {
+      navigate("/landing");
+    } else {
+      setError(data.message || "Signup failed");
+    }
+  };
+
+  return (
+    <main id="main-signup" className="flex flex-col justify-center items-center p-10 md:p-20">
+      <h1 id="signup" className="mb-8">SIGN UP</h1>
+
+      <div className="flex flex-col items-center">
+        <div className="input-group">
+          <input
+            type="email"
+            required
+            value={email}
+            onChange={e => setEmail(e.target.value)}
+          />
+          <label>Email</label>
+        </div>
+
+        <div className="input-group">
+          <input
+            type="password"
+            required
+            value={password}
+            onChange={e => setPassword(e.target.value)}
+          />
+          <label>Password</label>
+        </div>
+
+        <div className="input-group">
+          <input
+            type="password"
+            required
+            value={confirmPassword}
+            onChange={e => setConfirmPassword(e.target.value)}
+          />
+          <label>Confirm Password</label>
+        </div>
+      </div>
+
+      {error && <p className="text-red-600 mt-3">{error}</p>}
+
+      <div className="flex flex-col gap-4 mt-6">
+        <button type="button" id="S1" onClick={handleSignup}>
+          Sign Up
+        </button>
+        <button type="button" id="S2" onClick={() => navigate("/")}>
+          Return
+        </button>
+      </div>
+    </main>
+  );
 };
 
 export default Signup;

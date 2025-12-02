@@ -1,5 +1,10 @@
 {
+  "name": "fcutsystem",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "concurrently \"npm run backend --prefix Backend\" \"npm run dev --prefix my-app\""
+  },
   "dependencies": {
-    "react": "^19.2.0"
+    "concurrently": "^8.2.0"
   }
 }

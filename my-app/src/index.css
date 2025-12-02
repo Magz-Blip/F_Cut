@@ -196,6 +196,7 @@ body {
     color: #000;
     outline: none;
     transition: 0.2s ease;
+    background:none
 }
 
 
@@ -207,5 +208,58 @@ body {
     border-color: white;
     box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
 }
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+.input-group {
+    position: relative;
+    margin: 20px 0;
+}
+
+.input-group label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #000000;
+    padding: 0 5px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-group input {
+    width: 360px;
+    height: 60px;
+    font-size: 16px;
+    color: #fff;
+    padding: 0 15px;
+    background: transparent;
+    border: 1.2px solid #000000;
+    outline: none;
+    border-radius: 14px;
+}
+
+.input-group input:focus ~ label,
+.input-group input:valid ~ label {
+    top: 0;
+    font-size: 14px;
+    background: transparent;
+    padding: 0 8px;
+    border-radius: 3px;
+    z-index: 10;
+    pointer-events: none;
+    position: relative;
+    left: 15px;
+}
+
 
 
